@@ -94,7 +94,7 @@ accessibility: true
 
 # visual testings
 percy: true
-percyCaptureMode: click
+percyCaptureMode: manual
 
 #performnace
 performance: report
