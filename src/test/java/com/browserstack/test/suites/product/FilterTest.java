@@ -29,7 +29,7 @@ public class FilterTest extends TestBase {
                 .collect(Collectors.toList());
         Assertions.assertThat(values).isSorted();
 
-        PercySDK.screenshot(driver,"Filter Lowest to Highest");
+        PercySDK.snapshot(driver,"Filter Lowest to Highest");
     }
 
     @Test
@@ -47,6 +47,6 @@ public class FilterTest extends TestBase {
         List<String> expectedValues = CsvUtil.readSpecificColumn("src/test/resources/data/products.csv", 2);
         Assertions.assertThat(values).containsExactly(expectedValues.toArray(new String[0]));
 
-        PercySDK.screenshot(driver,"Vendor Filter Applied");
+        PercySDK.snapshot(driver,"Vendor Filter Applied");
     }
 }

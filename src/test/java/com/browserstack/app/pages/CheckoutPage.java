@@ -1,5 +1,6 @@
 package com.browserstack.app.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,7 +36,7 @@ public class CheckoutPage extends BasePage {
         addressInput.sendKeys(address);
         stateInput.sendKeys(state);
         postcodeInput.sendKeys(postcode);
-        checkoutButton.click();
+        checkoutButton.sendKeys(Keys.ENTER);
         return new ConfirmationPage(driver);
     }
 

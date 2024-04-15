@@ -37,7 +37,7 @@ public class OfferTest extends TestBase {
 
         Assert.assertEquals(driver.findElements(By.cssSelector(".offer")).size(), 3);
 
-        PercySDK.screenshot(driver,"Offer Page");
+        PercySDK.snapshot(driver,"Offer Page");
     }
 
 }
