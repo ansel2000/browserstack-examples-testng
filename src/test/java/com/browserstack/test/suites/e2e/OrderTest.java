@@ -15,6 +15,8 @@ public class OrderTest extends TestBase {
     @Test
     public void placeOrder() {
         SoftAssert softly = new SoftAssert();
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("browserstack_executor: {\"action\": \"lighthouseAudit\"}");
         ConfirmationPage page = new HomePage(driver)
                 .navigateToSignIn()
                 .loginWith("fav_user", "testingisfun99")
