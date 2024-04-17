@@ -9,6 +9,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import java.util.HashMap;
+import java.util.Random;
 
 public class OrderTest extends TestBase {
 
@@ -31,7 +33,6 @@ public class OrderTest extends TestBase {
         HashMap<String, Object> options1 = new HashMap<String, Object>();
         String randomColor = "#" + String.format("%06x", new Random().nextInt(0xffffff + 1));
         options1.put("percyCSS", ".cart-priceItem-value{background-color: " + randomColor + ";}");
-
         PercySDK.snapshot(driver,"Shipping details",options1);
 
         if (!isOnPremExecution()) {
