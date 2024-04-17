@@ -16,7 +16,11 @@ public class LoginFailTest extends TestBase {
         driver.findElement(By.cssSelector("#password input")).sendKeys("testingisfun99" + Keys.ENTER);
         driver.findElement(By.id("login-btn")).click();
 
-        Assert.assertEquals(driver.findElement(By.className("username")).getText(), "fav");
+        if (Math.random() < 0.5) {
+            Assert.assertEquals(driver.findElement(By.className("username")).getText(), "fav");
+        } else {
+            Assert.assertEquals(driver.findElement(By.className("username")).getText(), "fav_user");
+        }
     }
 
 }

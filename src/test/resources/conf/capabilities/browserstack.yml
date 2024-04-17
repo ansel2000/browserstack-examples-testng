@@ -16,9 +16,9 @@ accessKey: BROWSERSTACK_ACCESS_KEY
 # Ensure you add a dynamic identifier, like an incremental build number from your
 # CI/CD or timestamp at the end of every build; otherwise tests from different
 # executions will be grouped together on BrowserStack
-buildName: Temp-WebApp-Regression-Project
+buildName: E2E-WebApp-Regression-Demo
 # Use `projectName` to set the name of your project. Example, Marketing Website
-projectName: SamplePercyDemo01
+projectName: E2E-WebApp-Regression-Demo-Project
 
 buildIdentifier: ${BUILD_NUMBER}
 
@@ -39,14 +39,16 @@ platforms:
     osVersion: 11
     browserName: Chrome
     browserVersion: latest
-  - os: Windows
-    osVersion: 10
-    browserName: Edge
-    browserVersion: latest
+    accessibility: true
+  - deviceName: iPhone 13
+    osVersion: 15
+    browserName: Chromium
+    deviceOrientation: portrait
   - os: OS X
     osVersion: Sonoma
     browserName: Chrome
     browserVersion: latest
+    accessibility: true
   - deviceName: Samsung Galaxy S23 Ultra
     osVersion: 13.0
     browserName: chrome
@@ -88,9 +90,6 @@ consoleLogs: errors # <string> Remote browser's console debug levels to be print
 
 # test observability for insights and debugging
 testObservability: true
-
-# Accessbility reports
-accessibility: true
 
 # visual testings
 percy: true
