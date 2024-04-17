@@ -16,9 +16,9 @@ accessKey: BROWSERSTACK_ACCESS_KEY
 # Ensure you add a dynamic identifier, like an incremental build number from your
 # CI/CD or timestamp at the end of every build; otherwise tests from different
 # executions will be grouped together on BrowserStack
-buildName: E2E-WebApp-Regression-Demo
+buildName: End-to-End-Web-Demo
 # Use `projectName` to set the name of your project. Example, Marketing Website
-projectName: E2E-WebApp-Regression-Demo-Project
+projectName: End-to-End-Web-Demo-Project
 
 buildIdentifier: ${BUILD_NUMBER}
 
@@ -78,7 +78,7 @@ browserstackLocal: false # <boolean> (Default false)
 #  forceLocal: true  # <boolean> (Default: false) Set to true if you need to resolve all your traffic via BrowserStack Local tunnel.
 # Entire list of arguments available here -> https://www.browserstack.com/docs/automate/selenium/manage-incoming-connections
 
-logLevel: info
+logLevel: debug
 # ===================
 # Debugging features
 # ===================
