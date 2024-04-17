@@ -37,7 +37,7 @@ public class LoginTest extends TestBase {
         Assert.assertEquals(driver.findElement(By.className("username")).getText(), "fav_user");
         HashMap<String, Object> options1 = new HashMap<String, Object>();
         String randomColor = "#" + String.format("%06x", new Random().nextInt(0xffffff + 1));
-        options1.put("percyCSS", " .shelf-container .shelf-item{background-color: " + randomColor + ";}");
+        options1.put("percyCSS", ".shelf-container .shelf-item__buy-btn{background-color: " + randomColor + ";}");
         PercySDK.snapshot(driver, "LoggedIn Page", options1);
     }
 

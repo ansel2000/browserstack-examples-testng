@@ -28,7 +28,11 @@ public class OrderTest extends TestBase {
                 .enterShippingDetails("firstname", "lastname", "address", "state", "12345");
 
         Assert.assertTrue(page.isConfirmationDisplayed());
-        PercySDK.snapshot(driver,"Shipping details");
+        HashMap<String, Object> options1 = new HashMap<String, Object>();
+        String randomColor = "#" + String.format("%06x", new Random().nextInt(0xffffff + 1));
+        options1.put("percyCSS", ".cart-priceItem-value{background-color: " + randomColor + ";}");
+
+        PercySDK.snapshot(driver,"Shipping details",options1);
 
         if (!isOnPremExecution()) {
             page.downloadPDF();
