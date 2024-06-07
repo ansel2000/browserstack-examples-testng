@@ -14,15 +14,15 @@
       "env_caps": [
         {
           "browserName": "Chrome",
-          "browserVersion": "115.0"
+          "browserVersion": "latest"
         },
         {
           "browserName": "Firefox",
-          "browserVersion": "116.0"
+          "browserVersion": "latest"
         },
         {
           "browserName": "Edge",
-          "browserVersion": "116.0"
+          "browserVersion": "latest"
         }
       ]
     }
